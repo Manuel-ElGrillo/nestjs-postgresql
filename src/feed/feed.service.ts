@@ -16,4 +16,8 @@ export class FeedService {
         return this.feedPostRepository.save(feedPost);
     }
 
+    getAllPost () {
+        return this.feedPostRepository.find();
+    }
+
 }

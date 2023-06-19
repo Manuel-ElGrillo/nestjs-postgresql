@@ -1,4 +1,4 @@
-import { Controller, Post, Body } from '@nestjs/common';
+import { Controller, Post, Body, Get } from '@nestjs/common';
 import { FeedService } from './feed.service';
 import { FeedPost } from './interface/post.interface';
 
@@ -10,6 +10,11 @@ export class FeedController {
     @Post()
     createPost (@Body() post: FeedPost) {
         return this.feedService.createPost(post)
+    }
+
+    @Get()
+    getAllPost() {
+        return this.feedService.getAllPost()
     }
 
 }
