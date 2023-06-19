@@ -20,4 +20,12 @@ export class FeedService {
         return this.feedPostRepository.find();
     }
 
+    updatePost (id: number, feedPost: FeedPost) {
+        return this.feedPostRepository.update(id, feedPost);
+    }
+
+    deletePost( id: number ) {
+        return this.feedPostRepository.delete( id );
+    }
+
 }
